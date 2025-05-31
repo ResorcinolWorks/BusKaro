@@ -1,0 +1,51 @@
+{
+  "rules": {
+    "frontend": {
+      "src": {
+        "pages": {
+          "Index.tsx": "Home page with search functionality",
+          "BusRoutes.tsx": "Bus routes listing and filtering",
+          "Cart.tsx": "Shopping cart management",
+          "Checkout.tsx": "Payment and booking confirmation",
+          "Account.tsx": "User account management"
+        }
+      }
+    },
+    "backend": {
+      "routes": {
+        "auth": {
+          "signup": "POST /api/auth/signup - User registration",
+          "login": "POST /api/auth/login - User login with JWT"
+        },
+        "core": {
+          "routes": "GET /api/routes - Get all bus routes",
+          "search": "GET /api/routes/search - Search specific routes",
+          "account": "GET /api/account - User account history",
+          "cart": {
+            "get": "GET /api/cart - Get cart items",
+            "add": "POST /api/cart - Add ticket to cart",
+            "remove": "DELETE /api/cart/{id} - Remove from cart"
+          },
+          "checkout": "POST /api/checkout - Process purchase"
+        },
+        "static": {
+          "cities": "GET /api/cities - Get all cities",
+          "popular": "GET /api/routes/popular - Get popular routes",
+          "operators": "GET /api/operators - Get bus operators"
+        }
+      },
+      "entities": {
+        "User": "User entity with authentication details",
+        "BusRoute": "Bus route information",
+        "CartItem": "Shopping cart items",
+        "Booking": "Booking records"
+      },
+      "tech": {
+        "framework": "Spring Boot 3.x",
+        "security": "Spring Security with JWT",
+        "database": "H2 Database",
+        "patterns": ["Controller-Service-Repository", "DTO"]
+      }
+    }
+  }
+} 
